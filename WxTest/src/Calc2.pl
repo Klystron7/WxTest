@@ -8,6 +8,8 @@
 use Wx qw[:allclasses];
 use strict;
 
+
+
 # begin wxGlade: dependencies
 # end wxGlade
 
@@ -121,7 +123,12 @@ sub on_button_pressed {
     
     # wxGlade: CalculatorFrame::on_button_pressed <event_handler>
     #warn "Event handler (on_button_pressed) not implemented";
-    $event->Skip;
+    
+    my($status, $output) = Wx::ExecuteCommand("notepad.exe test.txt");
+    #my @cmd = ("notepad.exe","");
+    #run \@cmd;
+    
+    #$event->Skip;
     # end wxGlade
 }
 

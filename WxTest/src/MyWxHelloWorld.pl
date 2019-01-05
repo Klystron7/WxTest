@@ -18,7 +18,7 @@ sub OnInit
         -1,               # Window id
         'Hello World',    # Title
         [ 1,   1 ],       # position X, Y
-        [ 200, 150 ]      # size X, Y
+        [ 300, 300 ]      # size X, Y
     );
     $self->SetTopWindow($frame);    # Define the toplevel window
     $frame->Show(1);                # Show the frame

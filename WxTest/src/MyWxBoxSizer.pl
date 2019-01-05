@@ -1,7 +1,5 @@
 
-use Wx qw[:allclasses];
 use strict;
-
 package MyFrame;    
  
 use Wx qw[:everything];
@@ -62,7 +60,7 @@ sub new {
     return $self;
 }
 
-package WxBoxSizer;
+package MyWxBoxSizer;
 
 use base qw(Wx::App);
 
@@ -75,7 +73,7 @@ sub OnInit
     my $frame = MyFrame->new(
         undef,            # Parent window
         -1,               # Window id
-        'Hello World',    # Title
+        'MyBoxSizer',    # Title
         [ 1,   1 ],       # position X, Y
         [ 200, 150 ]      # size X, Y
     );
@@ -90,7 +88,7 @@ sub OnInit
 #
 package main;
 
-my $wxobj = WxBoxSizer->new();   
+my $wxobj = MyWxBoxSizer->new();   
 $wxobj->MainLoop;
 
 1;
